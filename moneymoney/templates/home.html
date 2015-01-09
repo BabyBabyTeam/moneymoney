@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  {% if money_value %}
+    <form action="?money_value={{ money_value }}/" method="GET">{% csrf_token %}
+  {% else %}
+    <form action="" method="GET">{% csrf_token %}
+    <h1>너 얼마있어</h1>
+    나<input type="text" name="money_value">원 있어
+    </form>
+  {% endif %}
+{% endblock %}
