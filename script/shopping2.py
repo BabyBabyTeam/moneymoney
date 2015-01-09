@@ -6,7 +6,7 @@ import json
 
 def get_item_info(query):
     #request
-    URL = "http://shopping.naver.com/search/all_search.nhn?query="+query+"&cat_id=&frm=NVSHSRC"
+    URL = "http://shopping.naver.com/search/all_search.nhn?query="+query
     r = requests.get(URL)
     
     #parsing
