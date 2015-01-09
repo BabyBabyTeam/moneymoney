@@ -1,24 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
-
-  <form action="?money_value={{ money_value }}/" method="GET">{% csrf_token %}
-    <h1>너 얼마있어</h1>
-    나<input type="text" name="money_value" required autofocus>원 있어
-  </form>
-
-  {% if item_name and item_price and item_url and image_url %}
-      <h1>이거 추천해줄게</h1>
-      <li>아이템 : <a href="http://shopping.naver.com/{{ item_url }}" target="_blank">{{ item_name }}</a></li>
-      <li>가격 : {{ item_price }}</li>
-      <li><img src="{{ image_url }}" target="_blank"></img></li>
-  {% else %}
-  {% endif %}
+<!-- http://www.w3schools.com/css/css_image_transparency.asp -->
+  <div class="background">
+    <div class="text">
+      <form action="?money_value={{ money_value }}/" method="GET">{% csrf_token %}
+        <h1>너 얼마있어</h1>
+        나<input type="text" name="money_value" required autofocus>원 있어
+      </form>
+    
+      {% if item_name and item_price and item_url and image_url %}
+        <h4>이거 추천해줄게, <span class="green-font">{{ res_message }}</span></h4>
+    
+        <ul>
+          <li>아이템 : <a href="http://shopping.naver.com/{{ item_url }}" target="_blank">{{ item_name }}</a></li>
+          <li>가격 : {{ item_price }}</li>
+        </ul>
+       
+      {% else %}
+      {% endif %}
+    </div>
+  </div>
 
   <style>
-    body {
-      background-image: url({{ image_url }});
-      font-size:40px;
-      color:red; filter:alpha(opacity=100);
+    div.background {
+      background: url({{ image_url }});
+    }
+    div.text {
+      opacity: 1.5;
+      font-size: 40px;
+      color: red;
+    }
+    div.green-font {
+      color:green;
     }
   </style>
 {% endblock %}
