@@ -6,7 +6,7 @@ Money Money
 ---
 `돈계산할 때에 ',' 기호를 깜빡했다.`
 
-디버깅 2. parsing -> Nonetype error`
+디버깅 2. parsing -> Nonetype error
 ---
 `requests로 받은 네이버 쇼핑 검색 결과 URL 중 일부는 2차 파싱 후 
 BeatifulSoup의 인스턴스가 가지는 find method가 없었다. ( 오류 발생 )
