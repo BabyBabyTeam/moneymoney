@@ -2,9 +2,13 @@ Money Money
 ===
 `우리들의 세뱃돈, 무엇을 살 수 있을까?`
 
+
+![show](http://41.media.tumblr.com/be44fad35660b65a5ad4de1b79c7af68/tumblr_nhxaqhLEvN1tmjqr6o1_500.png)
+![show2](http://40.media.tumblr.com/a2c28c95a8c8001cdff6a1a7bd4300d2/tumblr_nhxaqhLEvN1tmjqr6o2_500.png)
+
 디버깅 1. ValueError: invalid literal for int() with base 10:
 ---
-`돈계산할 때에 ',' 기호를 깜빡했다.`
+`돈계산할 때에 ',' 기호를 깜빡했다. ( 정수 형 변환을 할 때 숫자문자가 아닌걸 변환하려고 했었다. )`
 
 디버깅 2. parsing -> Nonetype error
 ---
